@@ -2,6 +2,7 @@
 
 Offline jigsaw PWA for Tori (≈7) and TJ (≈4). No build step, no dependencies.
 
+- Live: https://atlspartan33.github.io/kid-puzzles/ (GitHub Pages from `main`, repo Atlspartan33/kid-puzzles)
 - Run: `node server.mjs 5236` → http://localhost:5236 (launch entry `kid-puzzles`)
 - Files: `index.html`, `styles.css`, `app.js` (gallery + puzzle engine), `audio.js` (synth SFX + speech), `store.js` (IndexedDB photos), `sw.js` (offline), `manifest.webmanifest`, `art/` (8 Book 4 pages, 1600px webp + 480px thumbs), `icons/`.
 
@@ -13,6 +14,6 @@ Offline jigsaw PWA for Tori (≈7) and TJ (≈4). No build step, no dependencies
 - Own pictures: "Add your picture" → Android photo picker/camera → cropped to a sane aspect, stored in IndexedDB on the device.
 
 ## Offline / install
-The service worker only runs on **HTTPS or localhost**. Over LAN `http://192.168.x.x:5236` the tablet can play but can't install or work offline. Host it (GitHub Pages / Vercel) to install it as an app. Bump `VERSION` in `sw.js` when shipping changes.
+The service worker only runs on **HTTPS or localhost**. Over LAN `http://192.168.x.x:5236` the tablet can play but can't install or work offline. The hosted copy installs as an app. Push to `main` to redeploy and bump `VERSION` in `sw.js` when shipping changes.
 
 Test hook: `window.__kp.pieces()` gives piece and target screen centers.
